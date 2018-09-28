@@ -1,0 +1,42 @@
+{
+  "name": "plantos",
+  "version": "1.0.0",
+  "description": "Plant watering app for those without green thumbs to help remind when to water plants",
+  "main": "index.js",
+  "scripts": {
+    "test": "chai",
+    "build-css": "node-sass-chokidar --include-path ./resources/scss --include-path ./node_modules ./resources/scss/ -o ./public/assets/css",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./resources/scss --include-path ./node_modules ./resources/scss/ -o ./public/assets/css --watch --recursive",
+    "prod-css": "node-sass-chokidar --include-path ./resources/scss --include-path ./node_modules ./resources/scss/ -o ./public/assets/css --output-style compressed",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrisBierma/plantos"
+  },
+  "author": "Kris Acker Bierma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrisBierma/Plantos/issues"
+  },
+  "homepage": "https://github.com/KrisBierma/Plantos#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.1.1",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.2",
+    "moment": "^2.22.1",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "node-sass-chokidar": "^1.3.0",
+    "npm": "^6.0.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sequelize": "^4.37.7",
+    "sequelize-cli": "^4.0.0"
+  }
+}

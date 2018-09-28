@@ -1,0 +1,64 @@
+{{!-- main.handlebars is the injection point for all pages --}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    {{#if title}} {{title}} {{else}} Plantos {{/if}}
+  </title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="manifest" href="/assets/img/site.webmanifest">
+  <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff"> 
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:500,700|Vollkorn:400i" rel="stylesheet">
+  <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/app.css" type="text/css">
+
+
+</head>
+
+<body class={{bodyClass}}>
+  {{> navBar}} {{!-- pages get injected here --}} {{{body}}} {{!-- footer is covering the content --}} {{> footer}}
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> {{!-- bootstrap javascript --}} 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script> {{!-- moment.js -- will change to cdn --}}
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <script src="/assets/js/renderMenu.js"></script>
+  <script src="/assets/js/userButtons.js"></script>
+  <script src="/assets/js/plantButtons.js"></script>
+  <script src="/assets/js/waterButtons.js"></script>
+  <script src="/assets/js/renderCards.js"></script>
+
+  {{!-- script for urbanairship secure bridge for mixed https site --}}
+  <!-- 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1533500281.51 -->
+  <script type="text/javascript" src="https://web-sdk.urbanairship.com/notify/v1/ua-sdk.min.js"></script>
+  <script type="text/javascript">uaSetup.secureBridge({
+      appKey: 'vy8RpVboT4eRSxHRW3IMqQ'
+  })</script>
+
+  {{!-- script for urbanairship push notifications --}}
+  <script type="text/javascript">
+  // 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1533500281.51
+  !function(n,t,c,e,u){function r(n){try{f=n(u)}catch(n){return h=n,void i(p,n)}i(s,f)}function i(n,t){for(var c=0;c<n.length;c++)d(n[c],t);
+  }function o(n,t){return n&&(f?d(n,f):s.push(n)),t&&(h?d(t,h):p.push(t)),l}function a(n){return o(!1,n)}function d(t,c){
+  n.setTimeout(function(){t(c)},0)}var f,h,s=[],p=[],l={then:o,catch:a,_setup:r};n[e]=l;var v=t.createElement("script");
+  v.src=c,v.async=!0,v.id="_uasdk",v.rel=e,t.head.appendChild(v)}(window,document,'https://web-sdk.urbanairship.com/notify/v1/ua-sdk.min.js',
+    'UA', {
+      appKey: 'vy8RpVboT4eRSxHRW3IMqQ',
+      token: 'MTp2eThScFZib1Q0ZVJTeEhSVzNJTXFROjdSSTVlR1lEVjV0dGZncWJxMnZhSThwQTVySDAtLVhmd1dzNkhOTzFuTEE',
+      vapidPublicKey: 'BIXOYl4JQ9Az7VqcxaLH_tsrmX13NZ_3ZM3QSHnfJOlqpeuTukCIa0-7HPNxmSNPouFHhfeuFZVi0SU8Nax2s4Q='
+    });
+  </script>
+
+</body>
+</html>
