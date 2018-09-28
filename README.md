@@ -3,7 +3,7 @@ Plantos is a schduler for watering your plants. Search for plants in our databas
 
 ## Instructions
 
-1. 
+1. Go to this website to see it run https://wcotton229.github.io/Plantos/
 
 ## Build With
 
