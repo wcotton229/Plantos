@@ -1,10 +1,6 @@
 # Plantos
 Plantos is a schduler for watering your plants. Search for plants in our database or enter in your own and each plant's water needs are set into your scheudule to send you reminders. Never forget your plants again!
 
-## Instructions
-
-1. Go to this website to see it run https://wcotton229.github.io/Plantos/
-
 ## Build With
 
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Makes it interactive
